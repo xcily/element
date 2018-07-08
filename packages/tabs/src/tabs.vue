@@ -139,17 +139,21 @@
         },
         ref: 'nav'
       };
+
+      /** xcily add 支持SSR panels和header换了下创建的位置**/
+      const panels = (
+        <div class="el-tabs__content">
+        {this.$slots.default}
+      </div>
+      );
+
       const header = (
         <div class={['el-tabs__header', `is-${tabPosition}`]}>
           {newButton}
           <tab-nav { ...navData }></tab-nav>
         </div>
       );
-      const panels = (
-        <div class="el-tabs__content">
-          {this.$slots.default}
-        </div>
-      );
+      /** xcily end **/
 
       return (
         <div class={{

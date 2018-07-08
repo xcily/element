@@ -49,9 +49,11 @@
       }
     },
 
-    mounted() {
+    /** xcily add 支持SSR mounted 改为created **/
+    created() {
       this.$parent.addPanes(this);
     },
+    /** xcily end **/
 
     destroyed() {
       if (this.$el && this.$el.parentNode) {
