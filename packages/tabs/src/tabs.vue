@@ -143,8 +143,8 @@
       /** xcily add 支持SSR panels和header换了下创建的位置**/
       const panels = (
         <div class="el-tabs__content">
-        {this.$slots.default}
-      </div>
+          {this.$slots.default}
+        </div>
       );
 
       const header = (
